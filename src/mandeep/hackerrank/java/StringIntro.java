@@ -1,12 +1,12 @@
 package mandeep.hackerrank.java;
 
-import java.io.*;
 import java.util.*;
 
 public class StringIntro {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
 		String A=sc.next();
 		String B=sc.next();

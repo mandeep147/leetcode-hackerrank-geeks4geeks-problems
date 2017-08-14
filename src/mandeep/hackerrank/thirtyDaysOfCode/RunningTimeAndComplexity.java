@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class RunningTimeAndComplexity {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		int a[] = new int[T];

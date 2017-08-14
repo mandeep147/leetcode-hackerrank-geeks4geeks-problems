@@ -19,7 +19,8 @@ public class ReverseString {
     }
     
     public static void main(String args[]){
-    	String s = new ReverseString().reverseString("Hello");
+    	@SuppressWarnings("unused")
+		String s = new ReverseString().reverseString("Hello");
     //	System.out.println();
     }
 }

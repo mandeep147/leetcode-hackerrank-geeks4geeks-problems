@@ -1,7 +1,6 @@
 package mandeep.hackerrank.thirtyDaysOfCode;
 
 import java.util.*;
-import java.io.*;
 
 class CalculatorException{
     int power(int n, int p) throws Exception{
@@ -18,7 +17,8 @@ class CalculatorException{
 public class MoreExceptions {
 	 public static void main(String []argh)
 	    {
-	        Scanner in = new Scanner(System.in);
+	        @SuppressWarnings("resource")
+			Scanner in = new Scanner(System.in);
 	        int T=in.nextInt();
 	        while(T-->0)
 	        {

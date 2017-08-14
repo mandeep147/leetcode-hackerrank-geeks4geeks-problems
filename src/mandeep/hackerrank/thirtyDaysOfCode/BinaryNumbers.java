@@ -5,7 +5,8 @@ import java.util.*;
 public class BinaryNumbers {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int rem = 0, s = 0, t = 0;
                

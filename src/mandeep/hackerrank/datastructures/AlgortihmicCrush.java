@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class AlgortihmicCrush {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
 		int sizeOfList = sc.nextInt();

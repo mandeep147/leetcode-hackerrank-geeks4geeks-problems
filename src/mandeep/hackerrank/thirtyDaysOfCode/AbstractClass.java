@@ -31,7 +31,8 @@ public class AbstractClass {
 
 	 public static void main(String []args)
 	   {
-	      Scanner sc=new Scanner(System.in);
+	      @SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
 	      String title=sc.nextLine();
 	      String author=sc.nextLine();
 	      int price=sc.nextInt();
