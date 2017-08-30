@@ -8,11 +8,9 @@ public class ReverseString {
     	char newString[] = s.toCharArray();
     	String reverseString;
         for( int i = s.length()-1; i >= 0; i--){
-            System.out.print(newString[i]);
-         
+            System.out.print(newString[i]);       
         }
   
-        
        reverseString = newString.toString();
       // System.out.println(reverseString);
        return reverseString;
