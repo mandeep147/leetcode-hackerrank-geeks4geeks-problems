@@ -1,4 +1,4 @@
-package mandeep.hackerrank.algorithm;
+package mandeep.hackerrank.algorithm.warmup;
 
 import java.util.Scanner;
 

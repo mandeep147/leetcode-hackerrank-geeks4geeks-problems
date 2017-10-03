@@ -3,6 +3,9 @@
  */
 package mandeep.geeks4geeks;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * Given an array and an integer k, find the maximum for each and every contiguous subarray of size k.
  * Input :
@@ -18,9 +21,11 @@ public class SlidingWindowMaximum {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] arr = {1, 2, 3, 1, 4, 5, 2, 3, 6};
+		//int[] arr = {1, 2, 3, 1, 4, 5, 2, 3, 6};
+		int[] arr = {12, 1, 78, 90, 57, 89, 56};
 		int k = 3;
-		maxValue(arr, k);
+		//maxValue(arr, k);
+		maxDeque(arr, k);
 	}
 	
 	/**
@@ -49,6 +54,35 @@ public class SlidingWindowMaximum {
 	 */
 	
 	private static void maxDeque(int[] arr, int k){
+		/**
+		 * create a double ended queue, Qi that will store indexes of array elements. The queue will store indexes of 
+		 * useful elements in every window and maintain decreasing order of values from front to rear in Qi, ie.
+		 * arr[Qi.front()] tp arr[Qi.rear()] are sorted in decreasing order
+		 */
+		
+		Deque<Integer> qi = new LinkedList<Integer>();
+		int i ;
+		for(i = 0; i < k; ++i){
+			while(!qi.isEmpty() && arr[i] >= arr[qi.peekLast()])
+				qi.removeLast();
+			qi.addLast(i);
+		}
+		
+		for(; i < arr.length; ++i){
+			//System.out.println(i);
+			//the element at front is the largest element of prev window
+			System.out.print(arr[qi.peek()] +" ");
+			while(!qi.isEmpty() && qi.peek() <= i - k)
+				qi.removeFirst();
+			
+			while(!qi.isEmpty() && arr[i] >= arr[qi.peekLast()])
+				qi.removeLast();
+			
+			qi.addLast(i);
+		}
+		
+		System.out.print(arr[qi.peek()]);
+		
 		
 	}
 }

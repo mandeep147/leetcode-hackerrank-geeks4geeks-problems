@@ -1,7 +1,7 @@
 /**
  * incomplete
  */
-package mandeep.hackerrank.algorithm;
+package mandeep.hackerrank.algorithm.implementation;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

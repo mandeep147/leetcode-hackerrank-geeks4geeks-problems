@@ -11,33 +11,33 @@ public class AlgortihmicCrush {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);
-		
-		int sizeOfList = sc.nextInt();
-		int numberOfOperations = sc.nextInt();
-		
-		int list[] = new int[sizeOfList];
-		
-		int a, b, k;
-		
-		for(int i = 0; i < numberOfOperations; i++){
-			a = sc.nextInt();
-			b = sc.nextInt();
-			k = sc.nextInt();
-			
-			for(int i1 = a-1; i1 < b; i1++){
-				list[i1]+= k;
-			}
-			sc.nextLine();
-		}
-		int max = Integer.MIN_VALUE;
-		
-		for(int i = 0; i < sizeOfList; i++){
-			if(list[i] > max){
-				max = list[i];
-			}
-		}
-		
-		System.out.println(max);
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+        int m = in.nextInt();
+        
+        int list[] = new int[n+1];
+        
+        for(int a0 = 0; a0 < m; a0++){
+            in.nextLine();
+            int a = in.nextInt();
+            int b = in.nextInt();
+            long k = in.nextLong();
+           
+            //for(int i1 = a-1; i1 < b; i1++){
+				list[a]+= k;
+			//}
+			//in.nextLine();
+            if (b+1 <= n)
+                list [b+1] -= k;
+        }
+        
+        long max = 0, addedDifference = 0; // int
+        for (int i=1; i<= n; i++) 
+        {
+            addedDifference = addedDifference + list[i];
+            if (max < addedDifference)
+                max = addedDifference;
+        }
+        System.out.println(max);
 	}
 }
