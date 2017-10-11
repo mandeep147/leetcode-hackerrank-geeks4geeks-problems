@@ -1,4 +1,4 @@
-package mandeep.hackerrank.datastructures;
+package mandeep.hackerrank.datastructures.arrays;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;

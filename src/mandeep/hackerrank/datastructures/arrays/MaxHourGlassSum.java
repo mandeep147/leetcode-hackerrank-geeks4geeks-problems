@@ -1,7 +1,7 @@
 /**
  * https://www.hackerrank.com/challenges/2d-array
  */
-package mandeep.hackerrank.datastructures;
+package mandeep.hackerrank.datastructures.arrays;
 
 import java.util.Scanner;
 
