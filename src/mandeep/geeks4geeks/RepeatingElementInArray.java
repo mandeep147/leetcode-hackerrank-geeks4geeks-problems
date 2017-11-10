@@ -3,6 +3,9 @@
  */
 package mandeep.geeks4geeks;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * You are given an array of n+2 elements. All elements of the array are in range 1 to n. 
  * And all elements occur once except two numbers which occur twice. 
@@ -21,11 +24,12 @@ public class RepeatingElementInArray {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] arr= {1, 2, 3, 1, 3, 6, 6};
+		int[] arr= {1, 4, 3, 1, 3, 6, 6};
 		int n = 7;
 		repeatedElements(arr, n);
 		System.out.println("repeated elements are: ");
 		allRepeatedElements(arr);
+		System.out.println("\n"+findDuplicates(arr));
 	}
 
 	/**
@@ -63,4 +67,20 @@ public class RepeatingElementInArray {
 		}
 	}
 
+	/**
+	 * 
+	 * @param nums
+	 * @return
+	 */
+	public static List<Integer> findDuplicates(int[] nums) {
+		 List<Integer> res = new ArrayList<>();
+	        for (int i = 0; i < nums.length; i++) {
+	            int index = Math.abs(nums[i]) - 1;
+	            if (nums[index] < 0)
+	                res.add(Math.abs(nums[index]));
+	            else
+	            	nums[index] = -nums[index];
+	        }
+	        return res;
+    }
 }
