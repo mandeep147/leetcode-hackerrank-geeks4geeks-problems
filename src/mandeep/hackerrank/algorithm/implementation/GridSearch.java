@@ -3,8 +3,6 @@
  */
 package mandeep.hackerrank.algorithm.implementation;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -43,6 +41,7 @@ public class GridSearch {
             for(int k=0; k < pRow; k++){
                 pattern[k] = in.next();
             }
+            in.close();
             gridSearch(row, column, mat, pRow, pCol, pattern);
         }
 	}

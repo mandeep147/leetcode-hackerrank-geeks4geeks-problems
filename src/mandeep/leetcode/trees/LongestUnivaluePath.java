@@ -7,7 +7,7 @@
  * 
  * https://leetcode.com/problems/longest-univalue-path/description/
  */
-package mandeep.leetcode.recursion;
+package mandeep.leetcode.trees;
 
 /**
  * @author mandeep
@@ -47,7 +47,7 @@ public class LongestUnivaluePath {
 	public static int longestUnivaluePath(TreeNode root) {
 		if (root == null)
 			return 0;
-		return Math.max(getLength(root.left, root.val) + getLength(root.right, root.val), length);
+		return Math.max(getLength(root.left, root.data) + getLength(root.right, root.data), length);
 	}
 
 	/**
@@ -59,21 +59,11 @@ public class LongestUnivaluePath {
 	private static int getLength(TreeNode node, int val) {
 		if (node == null)
 			return 0;
-		int left = getLength(node.left, node.val);
-		int right = getLength(node.right, node.val);
+		int left = getLength(node.left, node.data);
+		int right = getLength(node.right, node.data);
 		length = Math.max(length, left + right);
-		if (val == node.val)
+		if (val == node.data)
 			return Math.max(left, right) + 1;
 		return 0;
-	}
-}
-
-class TreeNode {
-	TreeNode left;
-	TreeNode right;
-	int val;
-
-	TreeNode(int val) {
-		this.val = val;
 	}
 }

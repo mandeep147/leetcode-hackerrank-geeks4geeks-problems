@@ -3,7 +3,6 @@
  */
 package mandeep.geeks4geeks;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
 
 /**
  * Given a string, that contains special character together with alphabets 

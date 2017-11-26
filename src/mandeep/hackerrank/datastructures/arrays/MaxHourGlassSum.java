@@ -30,7 +30,7 @@ public class MaxHourGlassSum {
                 arr[i][j] = in.nextInt();
             }
         }
-        
+        in.close();
         System.out.println(maxHourGlass(arr));
 	}
 	private static int maxHourGlass(int[][] arr){

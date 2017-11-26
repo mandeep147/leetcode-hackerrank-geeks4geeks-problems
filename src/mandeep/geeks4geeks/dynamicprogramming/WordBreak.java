@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -20,7 +19,6 @@ import java.util.Set;
  */
 public class WordBreak {
 	
-	private static Map<String, String> finalList = new HashMap<>();
 	private static HashMap<String, ArrayList<String>> wordBreak = new HashMap<String, ArrayList<String>>();
 	/**
 	 * @param args
