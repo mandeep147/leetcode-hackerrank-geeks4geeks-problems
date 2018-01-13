@@ -24,7 +24,7 @@ public class SlidingWindowMaximum {
 		//int[] arr = {1, 2, 3, 1, 4, 5, 2, 3, 6};
 		int[] arr = {12, 1, 78, 90, 57, 89, 56};
 		int k = 3;
-		//maxValue(arr, k);
+		maxValue(arr, k);
 		maxDeque(arr, k);
 	}
 	

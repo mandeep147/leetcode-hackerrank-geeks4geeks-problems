@@ -32,7 +32,7 @@ public class SubtreeOfTree {
 
 		TreeNode root2 = new TreeNode(4);
 		TreeNode node21=new TreeNode(1);  
-		TreeNode node31=new TreeNode(2);
+		//TreeNode node31=new TreeNode(2);
 		
 		root2.left=node21;  
 		//root2.right=node31;  
