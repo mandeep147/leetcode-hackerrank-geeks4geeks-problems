@@ -8,11 +8,12 @@ public class ReverseString {
     	char newString[] = s.toCharArray();
     	String reverseString;
         for( int i = s.length()-1; i >= 0; i--){
-            //System.out.print(newString[i]);       
+        	newString[i] = s.charAt(i);
+            System.out.print(newString[i]);       
         }
   
        reverseString = newString.toString();
-      // System.out.println(reverseString);
+       //System.out.println(reverseString);
        return reverseString;
     }
     
@@ -22,7 +23,7 @@ public class ReverseString {
         String temp;
         int len = words.length -1;
         for(String str : words)
-        	System.out.println(str);
+        	System.out.print(str);
         while(i < len){
           temp = words[i];
           words[i] = words[len];
@@ -38,7 +39,7 @@ public class ReverseString {
     public static void main(String args[]){
     	@SuppressWarnings("unused")
 		String s = new ReverseString().reverseString("Hello");
-    //	System.out.println();
+    	//System.out.println(s);
     	reverseWords("coding is fun");
     }
 }
