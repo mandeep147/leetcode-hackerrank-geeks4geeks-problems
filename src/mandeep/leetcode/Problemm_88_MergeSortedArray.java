@@ -18,12 +18,12 @@ public class Problemm_88_MergeSortedArray {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int a[] = {2, 4, 6, 8};
-		int b[] = {3, 5, 7, 7};
-		
-		int sort[] =merge(a,b);
-		for(int i = 0; i < sort.length; i++)
-			System.out.print(sort[i]+" ");
+		int a[] = { 2, 4, 6, 8 };
+		int b[] = { 3, 5, 7, 7 };
+
+		int sort[] = merge(a, b);
+		for (int i = 0; i < sort.length; i++)
+			System.out.print(sort[i] + " ");
 	}
 
 	/**
@@ -32,22 +32,22 @@ public class Problemm_88_MergeSortedArray {
 	 * @return
 	 */
 	private static int[] merge(int[] a, int[] b) {
-		
+
 		int m = a.length;
 		int n = b.length;
-		
-		int i = m  - 1;
+
+		int i = m - 1;
 		int j = n - 1;
 		int k = m + n - 1;
 		int[] a1 = new int[m + n];
-		
-		while(k >= 0){
-			if(j < 0 || (i >= 0 && a[i] > b[j]))
+
+		while (k >= 0) {
+			if (j < 0 || (i >= 0 && a[i] > b[j]))
 				a1[k--] = a[i--];
 			else
 				a1[k--] = b[j--];
 		}
-		
+
 		return a1;
 	}
 
