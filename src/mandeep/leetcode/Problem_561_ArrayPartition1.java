@@ -19,7 +19,7 @@ import java.util.Arrays;
  * @author mandeep
  *
  */
-public class ArrayPartition1 {
+public class Problem_561_ArrayPartition1 {
 
 	/**
 	 * @param args
