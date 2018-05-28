@@ -14,7 +14,7 @@ package mandeep.leetcode;
  * @author mandeep
  *
  */
-public class HammingDistance {
+public class Problem_461_HammingDistance {
 
 	/**
 	 * @param args

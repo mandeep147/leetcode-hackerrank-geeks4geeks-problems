@@ -10,7 +10,7 @@ package mandeep.leetcode;
  * @author mandeep
  *
  */
-public class MaxAreaIsland {
+public class Problem_695_MaxAreaIsland {
 
 	static private boolean[][] seen;
 	/**
