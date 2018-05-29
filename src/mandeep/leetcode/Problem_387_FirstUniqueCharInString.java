@@ -1,5 +1,14 @@
 /**
  * 527. First Unique Character in a String
+ * Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+Examples:
+
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
  */
 package mandeep.leetcode;
 
@@ -9,7 +18,7 @@ import java.util.HashMap;
  * @author mandeep
  * created on Mar 1, 2018, 11:27:57 PM
  */
-public class Problem_527_FirstUniqueCharInString {
+public class Problem_387_FirstUniqueCharInString {
 
 	/**
 	 * @param args

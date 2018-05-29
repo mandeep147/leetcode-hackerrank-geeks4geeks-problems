@@ -41,8 +41,32 @@ public class Problem_647_PallindromicSubstrings {
 	 * @return
 	 */
 	private static int countSubstringsManacher(String s) {
+		char[] arr = new char[2 * s.length() + 3];
+		arr[0] = '@';
+		arr[1] = '#';
+		arr[arr.length-1] = '$';
+		int t = 2;
+		for(char ch : s.toCharArray()){
+			arr[t++] = ch;
+			arr[t++] = '#';
+		}
 		
-		return 0;
+		int[] z = new int[arr.length];
+		int center = 0, right = 0;
+		for(int i = 1; i < z.length-1; i++){
+			if(i < right)
+				z[i] = Math.min(right-i, z[2*center-i]);
+			while(arr[i+z[i]+1] == arr[i-z[i] -1])
+				z[i]++;
+			if(i+z[i] > right){
+				center = i;
+				right = i+z[i];
+			}
+		}
+		int ans = 0;
+		for(int i : z)
+			ans += (i+1)/2;
+		return ans;
 	}
 
 	//==========Method-1 expand around center========
