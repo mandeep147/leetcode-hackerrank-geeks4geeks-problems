@@ -18,11 +18,12 @@ public class Problem_1_TwoSum {
 	
 	public static int[] twoSum(int[] arr, int sum){
 
-		/*
+
+		/**
 		 * using hash map one pass
 		 * time complexity = O(N), Space complexity = O(N)
 		 * 
-		*/
+		 */
 		HashMap<Integer, Integer> twoSumMap = new HashMap<Integer, Integer>();	
 		
 		for(int i = 0; i < arr.length; i++){
