@@ -46,7 +46,7 @@ public class Problem_445_AddTwoNumbersII {
 		int len2 = Node.length(l2);
 		
 		//pad smaller list with os
-		if(len1 > len2)
+		if(len1 < len2)
 			l1 = padLists(l1, len2 - len1);
 		else
 			l2 = padLists(l2, len1 - len2);

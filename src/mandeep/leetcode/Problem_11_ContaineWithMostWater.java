@@ -31,7 +31,7 @@ public class Problem_11_ContaineWithMostWater {
 		int len = arr.length;
 		int i = 0, j = len - 1;
 		while(i < j){
-			int area = Math.min(arr[i], arr[j]*(j-i));
+			int area = Math.min(arr[i], arr[j])*(j-i);
 			max = Math.max(max, area);
 			
 			if(arr[i] <= arr[j])
