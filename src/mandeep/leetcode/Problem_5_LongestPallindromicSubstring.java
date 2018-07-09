@@ -21,7 +21,7 @@ public class Problem_5_LongestPallindromicSubstring {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String s = "abcd";
+		String s = "abcda";
 		System.out.println("longest pallindromic substring of given string \'"+s+"\' is "+ longestPallindromicSubstring(s));
 		System.out.println("longest pallindromic substring of given string \'"+s+"\' is "+ longestPallindromicSubstringConstantSpace(s));
 	}

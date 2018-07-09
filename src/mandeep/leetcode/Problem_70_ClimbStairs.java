@@ -37,9 +37,12 @@ public class Problem_70_ClimbStairs {
 	public static void main(String[] args) {
 		int n = 5;
 		System.out.println(climbStairs(n));
+		System.out.println(climbingStairsDP(n));
+
 	}
 	
 	/**
+	 * Fibonacci Number
 	 * Time : O(n)
 	 * Space : O(1)
 	 * @param n
@@ -60,5 +63,22 @@ public class Problem_70_ClimbStairs {
 		}
 		
 		return secondStep;
+	}
+	
+	/**
+	 * Time= Space = O(n)
+	 * @param n
+	 * @return
+	 */
+	public static int climbingStairsDP(int n){
+		if(n == 1)
+			return 1;
+		int dp[] = new int[n+1];
+		dp[1] = 1;
+		dp[2] = 2;
+		
+		for(int i = 3; i <= n; i++)
+			dp[i] = dp[i - 1] + dp[i - 2];
+		return dp[n];
 	}
 }
