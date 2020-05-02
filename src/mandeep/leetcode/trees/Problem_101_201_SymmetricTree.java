@@ -83,11 +83,11 @@ public class Problem_101_201_SymmetricTree {
 			if(n1.data != n2.data)
 				return false;
 			
-			que.add(n1.left);
-			que.add(n2.right);
+			que.offer(n1.left);
+			que.offer(n2.right);
 			
-			que.add(n1.right);
-			que.add(n2.left);
+			que.offer(n1.right);
+			que.offer(n2.left);
 			
 		}
 		

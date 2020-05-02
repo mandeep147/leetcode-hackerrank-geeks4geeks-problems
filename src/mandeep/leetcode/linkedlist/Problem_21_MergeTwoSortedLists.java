@@ -24,13 +24,13 @@ public class Problem_21_MergeTwoSortedLists {
 		Node.printList(start);
 		Node.printList(second);
 		
-		/*Node l2 =mergeSortedLists(start, second);
+		Node l2 =mergeSortedLists(start, second);
 		System.out.println("merged list: ");
 		Node.printList(l2);
-		*/
-		Node sorted =mergeSortedListsIter(start, second);
-		System.out.println("merged list iter: ");
-		Node.printList(sorted);
+		
+//		Node sorted =mergeSortedListsIter(start, second);
+//		System.out.println("merged list iter: ");
+//		Node.printList(sorted);
 	}
 
 	/**

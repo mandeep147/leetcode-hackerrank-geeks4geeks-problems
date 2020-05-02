@@ -45,16 +45,25 @@ public class Problem_206_ReverseLinkedList {
 	 * @param head
 	 * @return
 	 */
-	private static Node reverseList(Node head) {
-		Node prev = null;
-		Node curr = head;
-		while(curr != null){
-			Node temp = curr.next;
-			curr.next = prev;
-			prev = curr;
-			curr = temp;
+	private static Node reverseList(Node start) {
+//		Node prev = null;
+//		Node curr = head;
+//		while(curr != null){
+//			Node temp = curr.next;
+//			curr.next = prev;
+//			prev = curr;
+//			curr = temp;
+//		}
+//		return prev;
+		
+		Node head = null;
+		while(start != null){
+			Node node = new Node(start.data);
+			node.next = head;
+			head = node;
+			start = start.next;
 		}
-		return prev;
+		return head;
 	}
 	
 	/**

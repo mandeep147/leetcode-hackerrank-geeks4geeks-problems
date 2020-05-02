@@ -31,45 +31,35 @@ public class Problem_138_CopyListWithRandomPointer {
 	}
 
 	private static RandomListNode copyRandomList(RandomListNode head) {
-		RandomListNode iter = head, next;
+		if(head == null)
+			return null;
 		
-		//copy of each node
-		while(iter != null){
-			next = iter.next;
-			RandomListNode copyNode = new RandomListNode(iter.label);
-			iter.next = copyNode;
-			copyNode.next = next;
-			iter = next;
+		RandomListNode iter = head;
+		while(iter != null) {
+			RandomListNode copy = new RandomListNode(iter.label);
+			copy.next = iter.next;
+			iter.next = copy;
+			iter = copy.next;
 		}
 		
-		//random pointers to copyNode
 		iter = head;
-		while(iter != null){
-			if(iter.random != null)
+		while(iter != null) {
+			if(iter.random != null) {
 				iter.next.random = iter.random.next;
+			}
 			iter = iter.next.next;
 		}
 		
-		//restore original list, extract copy List
+		RandomListNode tempHead = head.next;
 		iter = head;
-		RandomListNode tempHead = new RandomListNode(0);
-		RandomListNode copy, copyIter = tempHead;
-		
-		while(iter != null){
-			next = iter.next.next;
-			
-			//extract the copyNode
-			copy = iter.next;
-			copyIter.next = copy;
-			copyIter = copy;
-			
-			//restore original
-			iter.next = next;
-			
-			iter = next;
+		while(iter != null) {
+			RandomListNode temp = iter.next;
+			iter.next = temp.next;
+			if(temp.next != null)
+				temp.next = temp.next.next;
+			iter = iter.next;
 		}
-		
-		return tempHead.next;
+		return tempHead;
     }
 }
 

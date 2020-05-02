@@ -98,5 +98,38 @@ public class Problem_23_MergeKSortedLists {
 		return head.next;
 		
 	}
+	
+	//updated
+	
+	public Node mergeKLists(Node[] lists) {
+        if(lists == null || lists.length == 0){
+            return null;
+        }
+        
+        PriorityQueue<Node> que = new PriorityQueue<Node>(new Comparator<Node>(){
+           public int compare(Node l1, Node l2) {
+               return l1.data - l2.data;
+           } 
+        });
+        
+        Node head = new Node(0);
+        Node p = head;
+        
+        for(Node list: lists) {
+            if(list != null)
+                que.offer(list);
+        }
+        
+        while(!que.isEmpty()) {
+        	Node n = que.poll();
+            p.next = n;
+            p = p.next;
+            if(n.next != null)
+                que.offer(n.next);
+            
+        }
+        
+        return head.next;
+    }
 
 }

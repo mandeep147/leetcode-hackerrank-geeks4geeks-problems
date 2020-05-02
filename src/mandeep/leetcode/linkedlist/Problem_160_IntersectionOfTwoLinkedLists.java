@@ -23,7 +23,7 @@ public class Problem_160_IntersectionOfTwoLinkedLists {
 
 		Node second = new Node(4);
 		second.appendToTail(6);
-		second.next = start.next.next.next.next;
+		second.next.next = start.next.next.next.next;
 
 		Node.printList(start);
 		Node.printList(second);

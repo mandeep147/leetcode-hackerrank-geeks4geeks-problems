@@ -4,6 +4,7 @@
 package mandeep.leetcode.trees;
 
 /**
+ * Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
  * @author mandeep
  * created on Mar 1, 2018, 8:32:58 PM
  */

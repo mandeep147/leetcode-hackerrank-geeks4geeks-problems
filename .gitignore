@@ -23,4 +23,5 @@ hs_err_pid*
 /RemoteSystemsTempFiles/
 .metadata/
 /bin
-
+.settings/
+.git/

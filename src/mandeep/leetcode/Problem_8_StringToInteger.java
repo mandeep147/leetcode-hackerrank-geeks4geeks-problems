@@ -39,10 +39,10 @@ public class Problem_8_StringToInteger {
 	 * @return
 	 */
 	private static int atoi(String s) {
+		s = s.trim();
+		
 		if(s == null || s.length() < 1)
 			return 0;
-		
-		s = s.trim();
 		
 		char flag = '+';
 		int i = 0;
